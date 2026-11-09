@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse Cuban coffee, fresh pastries, and café snacks at Café Calle Ocho.">
+    <title>Café Calle Ocho Menu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  </head>
+  <body>
+    <header class="container">
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="menu.html" aria-label="Café Calle Ocho home"><strong>Café Calle Ocho</strong></a></li>
+        </ul>
+        <ul>
+          <li><a href="menu.html" aria-current="page">Menu</a></li>
+          <li><a href="order.html">My Orders</a></li>
+          <li><a href="staff.html">Staff Login</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container">
+      <header>
+        <h1>Café Calle Ocho Menu</h1>
+        <p>Freshly brewed Cuban favorites and neighborhood treats, made with cariño.</p>
+      </header>
+
+      <nav aria-label="Menu categories">
+        <ul>
+          <li><a href="#hot-drinks">Hot Drinks</a></li>
+          <li><a href="#bakery">Bakery</a></li>
+          <li><a href="#snacks">Snacks</a></li>
+        </ul>
+      </nav>
+
+      <section aria-labelledby="hot-drinks">
+        <h2 id="hot-drinks">Hot Drinks</h2>
+        <div class="grid">
+          <article>
+            <h3>Café con leche</h3>
+            <p><strong>$3.50</strong></p>
+            <p>Rich Cuban espresso softened with steamed milk—an easygoing morning favorite.</p>
+            <button type="button" aria-label="Add Café con leche to order">Add</button>
+          </article>
+          <article>
+            <h3>Cuban coffee</h3>
+            <p><strong>$2.75</strong></p>
+            <p>A bold shot of espresso sweetened the traditional way with a smooth espuma.</p>
+            <button type="button" aria-label="Add Cuban coffee to order">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="bakery">
+        <h2 id="bakery">Bakery</h2>
+        <div class="grid">
+          <article>
+            <h3>Guava pastry</h3>
+            <p><strong>$3.25</strong></p>
+            <p>Flaky, golden pastry filled with sweet guava and finished with a light sugar glaze.</p>
+            <button type="button" aria-label="Add Guava pastry to order">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="snacks">
+        <h2 id="snacks">Snacks</h2>
+        <div class="grid">
+          <article>
+            <h3>Ham croqueta</h3>
+            <p><strong>$2.50</strong></p>
+            <p>A crisp, golden croqueta with a creamy ham filling, served warm.</p>
+            <button type="button" aria-label="Add Ham croqueta to order">Add</button>
+          </article>
+        </div>
+      </section>
+
+      <p><a href="order.html" role="button">View Order</a></p>
+    </main>
+
+    <footer class="container">
+      <hr>
+      <p><strong>Café Calle Ocho</strong></p>
+      <address>
+        123 Calle Ocho, Miami, FL 33135<br>
+        <a href="tel:+13055550128">(305) 555-0128</a> ·
+        <a href="mailto:hola@cafecalleocho.example">hola@cafecalleocho.example</a>
+      </address>
+      <small>Sample contact details for this café prototype.</small>
+    </footer>
+  </body>
+</html>
