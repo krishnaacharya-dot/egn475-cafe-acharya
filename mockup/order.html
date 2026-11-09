@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Order | Café Calle Ocho</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong>Café Calle Ocho</strong></li>
+            </ul>
+            <ul>
+                <li><a href="menu.html">Back to Menu</a></li>
+            </ul>
+        </nav>
+
+        <h1>Your Order</h1>
+        <p>Review your selected items before submitting your order.</p>
+
+        <article>
+            <h2>Order Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cuban Sandwich</td>
+                        <td>1</td>
+                        <td>$9.50</td>
+                    </tr>
+                    <tr>
+                        <td>Café con Leche</td>
+                        <td>1</td>
+                        <td>$3.50</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Total: $13.00</h3>
+        </article>
+
+        <form>
+            <label for="customer">Customer Name</label>
+            <input type="text" id="customer" name="customer" placeholder="Enter your name">
+
+            <label for="notes">Special Instructions</label>
+            <textarea id="notes" name="notes" placeholder="Any special requests?"></textarea>
+
+            <a href="confirmation.html" role="button">Submit Order</a>
+        </form>
+
+        <p><small>This is a static HTML mockup. Order submission is a demonstration only.</small></p>
+    </main>
+</body>
+</html>
