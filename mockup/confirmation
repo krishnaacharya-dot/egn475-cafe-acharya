@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | Café Calle Ocho</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container">
+        <nav>
+            <ul>
+                <li><strong>Café Calle Ocho</strong></li>
+            </ul>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>Thank You for Your Order!</h1>
+            <p>Your order has been received successfully.</p>
+
+            <h2>Order #1001</h2>
+            <p><strong>Customer:</strong> Maria Garcia</p>
+            <p><strong>Status:</strong> Received</p>
+
+            <h3>Order Details</h3>
+            <ul>
+                <li>Cuban Sandwich — $9.50</li>
+                <li>Café con Leche — $3.50</li>
+            </ul>
+
+            <h3>Total: $13.00</h3>
+
+            <a href="kitchen.html" role="button">View Kitchen Board (Staff)</a>
+            <a href="menu.html" role="button" class="secondary">Return to Menu</a>
+        </article>
+
+        <p><small>This is a static HTML demonstration. No real order has been submitted.</small></p>
+    </main>
+</body>
+</html>
