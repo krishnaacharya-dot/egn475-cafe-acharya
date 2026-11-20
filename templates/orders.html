@@ -1,0 +1,51 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}Order History | Café Calle Ocho{% endblock %}
+
+{% block content %}
+<h1>Order History 📋</h1>
+<p>Review previous customer orders and their details.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Items</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>#{{ order.id }}</td>
+            <td>{{ order.customer }}</td>
+            <td>{{ order["items"] }}</td>
+            <td>${{ "%.2f"|format(order.total_cents / 100) }}</td>
+            <td>
+                {% if order.status == "Completed" %}
+                    <mark>Completed</mark>
+                {% elif order.status == "Pending" %}
+                    <mark>Pending</mark>
+                {% else %}
+                    {{ order.status }}
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<hr>
+
+<h2>Order Summary</h2>
+<p>Total orders displayed: {{ orders|length }}</p>
+
+<a href="{{ url_for('home') }}" role="button" class="secondary">
+    Back to Home
+</a>
+{% endblock %}
+```

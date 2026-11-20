@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Café Calle Ocho{% endblock %}
+
+{% block content %}
+
+<section>
+    <h1>Welcome to Café Calle Ocho ☕</h1>
+
+    <p>
+        Experience the flavors of Cuba with authentic Cuban coffee,
+        delicious pastries, and traditional favorites.
+    </p>
+
+    <p>
+        Whether you're stopping by for your morning café con leche
+        or enjoying a Cuban sandwich, we're happy to serve you.
+    </p>
+
+    <a href="{{ url_for('menu') }}" role="button">
+        Explore Our Menu
+    </a>
+
+    <a href="{{ url_for('new_order') }}" role="button" class="secondary">
+        Place an Order
+    </a>
+</section>
+
+<hr>
+
+<section>
+    <h2>Our Favorites</h2>
+
+    <div class="grid">
+
+        <article>
+            <h3>☕ Café con Leche</h3>
+            <p>
+                A classic Cuban coffee blended with steamed milk.
+            </p>
+        </article>
+
+        <article>
+            <h3>🥪 Cuban Sandwich</h3>
+            <p>
+                A traditional sandwich filled with roasted pork,
+                ham, Swiss cheese, pickles, and mustard.
+            </p>
+        </article>
+
+        <article>
+            <h3>🥐 Guava Pastry</h3>
+            <p>
+                A flaky pastry filled with sweet guava.
+            </p>
+        </article>
+
+    </div>
+</section>
+
+<section>
+    <h2>Visit Us</h2>
+
+    <p>
+        Serving the Miami community with Cuban coffee and
+        authentic flavors.
+    </p>
+
+    <p><strong>Location:</strong> Miami, Florida</p>
+</section>
+
+{% endblock %}

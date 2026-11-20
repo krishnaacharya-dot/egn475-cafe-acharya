@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Menu | Café Calle Ocho{% endblock %}
+
+{% block content %}
+
+<h1>Our Menu ☕</h1>
+
+<p>
+    Explore our selection of authentic Cuban coffee,
+    pastries, snacks, and traditional favorites.
+</p>
+
+<div class="grid">
+
+    {% for item in items %}
+
+    <article>
+        <h3>{{ item.name }}</h3>
+
+        <p>
+            <strong>Category:</strong> {{ item.category }}
+        </p>
+
+        <p>
+            {{ item.description }}
+        </p>
+
+        <p>
+            <strong>Price:</strong>
+            ${{ "%.2f"|format(item.price_cents / 100) }}
+        </p>
+
+        <a href="{{ url_for('item_detail', item_id=item.id) }}">
+            View Details
+        </a>
+    </article>
+
+    {% endfor %}
+
+</div>
+
+<hr>
+
+<p>
+    <a href="{{ url_for('new_order') }}" role="button">
+        Place an Order
+    </a>
+</p>
+
+{% endblock %}

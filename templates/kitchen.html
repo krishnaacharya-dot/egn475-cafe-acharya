@@ -1,0 +1,46 @@
+```html
+{% extends "base.html" %}
+
+{% block title %}Kitchen | Café Calle Ocho{% endblock %}
+
+{% block content %}
+<h1>Kitchen Order Dashboard 👨‍🍳</h1>
+<p>View and manage orders currently being prepared.</p>
+
+<div class="grid">
+    {% for order in orders %}
+    <article>
+        <h3>Order #{{ order.id }}</h3>
+
+        <p><strong>Customer:</strong> {{ order.customer }}</p>
+        <p><strong>Items:</strong> {{ order["items"] }}</p>
+
+        <p>
+            <strong>Status:</strong>
+            {% if order.status == "Ready" %}
+                <mark>Ready for Pickup</mark>
+            {% elif order.status == "Preparing" %}
+                <mark>Preparing</mark>
+            {% else %}
+                <mark>Pending</mark>
+            {% endif %}
+        </p>
+
+        {% if order.status == "Pending" %}
+            <button>Start Preparing</button>
+        {% elif order.status == "Preparing" %}
+            <button>Mark as Ready</button>
+        {% else %}
+            <button class="secondary">Completed</button>
+        {% endif %}
+    </article>
+    {% endfor %}
+</div>
+
+<hr>
+
+<a href="{{ url_for('home') }}" role="button" class="secondary">
+    Back to Home
+</a>
+{% endblock %}
+```

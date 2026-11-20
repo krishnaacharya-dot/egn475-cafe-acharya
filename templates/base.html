@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Café Calle Ocho{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+
+<body>
+
+    <nav class="container">
+        <ul>
+            <li><strong>☕ Café Calle Ocho</strong></li>
+        </ul>
+
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('menu') }}">Menu</a></li>
+            <li><a href="{{ url_for('new_order') }}">Place Order</a></li>
+            <li><a href="{{ url_for('kitchen') }}">Kitchen</a></li>
+            <li><a href="{{ url_for('order_history') }}">Order History</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="container">
+        <small>© 2026 Café Calle Ocho | Miami, Florida</small>
+    </footer>
+
+</body>
+</html>

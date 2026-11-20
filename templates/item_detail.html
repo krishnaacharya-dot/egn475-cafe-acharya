@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}{{ item.name }} | Café Calle Ocho{% endblock %}
+
+{% block content %}
+
+<article>
+
+    <h1>{{ item.name }}</h1>
+
+    <p>
+        <strong>Category:</strong> {{ item.category }}
+    </p>
+
+    <p>
+        {{ item.description }}
+    </p>
+
+    <h3>Price</h3>
+
+    <p>
+        <strong>${{ "%.2f"|format(item.price_cents / 100) }}</strong>
+    </p>
+
+    <hr>
+
+    <a href="{{ url_for('menu') }}" role="button">
+        Back to Menu
+    </a>
+
+    <a href="{{ url_for('new_order') }}" role="button" class="secondary">
+        Place an Order
+    </a>
+
+</article>
+
+{% endblock %}
